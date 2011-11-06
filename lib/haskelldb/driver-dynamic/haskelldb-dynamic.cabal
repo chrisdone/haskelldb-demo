@@ -1,0 +1,22 @@
+Name: haskelldb-dynamic
+Version: 0.11
+Cabal-version: >= 1.2
+Build-type: Simple
+Copyright: The authors
+Maintainer: haskelldb-users@lists.sourceforge.net
+Author: Daan Leijen, Conny Andersson, Martin Andersson, Mary Bergman, Victor Blomqvist, Bjorn Bringert, Anders Hockersten, Torbjorn Martin, Jeremy Shaw
+License: BSD3
+Synopsis: HaskellDB support for the dynamically loaded drivers.
+
+Library
+  Build-depends: haskell98, base, mtl, haskelldb, plugins
+  Extensions: ExistentialQuantification,
+              OverlappingInstances,
+              UndecidableInstances,
+              MultiParamTypeClasses
+  Exposed-Modules:
+          Database.HaskellDB.DynConnect
+
+Executable DBDirect-dynamic
+  Main-is: DBDirect.hs
+  Build-depends: haskelldb==0.11

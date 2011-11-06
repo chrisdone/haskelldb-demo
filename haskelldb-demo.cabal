@@ -1,0 +1,27 @@
+Name:                haskelldb-demo
+Version:             0.1
+Synopsis:            A simple demonstration of HaskellDB.
+Description:         A simple demonstration of HaskellDB.
+Homepage:            http://chrisdone.com/posts/2011-11-06-haskelldb-tutorial.html
+License:             BSD3
+License-file:        LICENSE
+Author:              Chris Done
+Maintainer:          chrisdone@gmail.com
+Category:            Database
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Executable haskelldb-demo
+  Main-is:           Main.hs
+  Hs-source-dirs:    src
+  Build-depends:     base > 4 && < 5, data-default, old-time, regex-compat,
+                     template-haskell
+                   , haskelldb-hdbc-postgresql == 2.1.0
+                   , haskelldb == 2.1.3
+                   , haskelldb-hdbc == 2.1.0
+                   , HDBC-postgresql == 2.2.3.1
+  Other-modules:     Database.HaskellDB.Extra
+                   , Database.HaskellDB.PostgreSQL
+                   , Database.HaskellDB.Pagination
+                   , Database.HaskellDB.Get
+                   , Database.HaskellDB.TH
